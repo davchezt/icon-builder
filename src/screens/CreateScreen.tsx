@@ -1,5 +1,5 @@
 import { P, Footer, H3, A, Section, Main } from "@expo/html-elements";
-import { FontAwesome } from "@expo/vector-icons";
+import FontAwesome from "@expo/vector-icons/build/FontAwesome";
 import { useTheme } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { EmojiData, emojiIndex } from "emoji-mart";
