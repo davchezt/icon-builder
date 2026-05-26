@@ -53,6 +53,14 @@ export default function App({}) {
   const [theme, setTheme] = React.useState(CustomLightTheme);
   const ref = React.useRef(null);
 
+  React.useEffect(() => {
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }, []);
+
   return (
     <NavigationContainer theme={theme} linking={linking}>
       <Stack.Navigator

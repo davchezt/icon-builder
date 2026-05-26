@@ -1,5 +1,5 @@
 import FileSaver from "file-saver";
-import JSZip from "jszip";
+// import JSZip from "jszip";
 
 function loadImageAsync(uri: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -139,12 +139,13 @@ async function zipImagesAsync({
   splash: string;
   favicon: string;
 }) {
-  const zip = new JSZip();
-  // icon 1024x1024 - emoji padding - 128
-  // splash 2048x2048 - emoji padding - 1000 (524 icon)
-  zip.file("icon.png", icon, { base64: true });
-  zip.file("splash.png", splash, { base64: true });
-  zip.file("favicon.png", favicon, { base64: true });
-  const content = await zip.generateAsync({ type: "blob" });
-  return content;
+  // const zip = new JSZip();
+  // // icon 1024x1024 - emoji padding - 128
+  // // splash 2048x2048 - emoji padding - 1000 (524 icon)
+  // zip.file("icon.png", icon, { base64: true });
+  // zip.file("splash.png", splash, { base64: true });
+  // zip.file("favicon.png", favicon, { base64: true });
+  // const content = await zip.generateAsync({ type: "blob" });
+  // return content;
+  return "";
 }
